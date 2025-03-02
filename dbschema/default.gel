@@ -1,0 +1,26 @@
+module default {
+  type BlogPost {
+    required title: str;
+    required slug: str;
+    required content: str;
+    description: str;
+    status: str {
+      default := 'draft';
+    };
+    created: datetime;
+    published: datetime;
+    updated: datetime;
+    multi tags: Tag;
+
+    constraint exclusive on (.slug);
+    
+    index on (.slug);
+  }
+
+  type Tag {
+    required name: str;
+    multi posts: BlogPost;
+  }
+
+ 
+}

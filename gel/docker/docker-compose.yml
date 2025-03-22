@@ -3,15 +3,20 @@ services:
   gel:
     image: geldata/gel:6.2
     environment:
-      GEL_SERVER_SECURITY: insecure_dev_mode
+      GEL_SERVER_SECURITY: strict
       GEL_SERVER_ADMIN_UI: enabled
       GEL_SERVER_BACKEND_DSN: ${GEL_SERVER_BACKEND_DSN}
       GEL_SERVER_PASSWORD: ${GEL_SERVER_PASSWORD}
       GEL_SERVER_USER: ${GEL_SERVER_USER}
       GEL_SERVER_INSTANCE_NAME: ${GEL_SERVER_INSTANCE_NAME}
       GEL_LOG_LEVEL: Info
+    networks:
+      - coolify-infra
     volumes:
       - "./dbschema:/dbschema"
     ports:
       - "5656:5656"
       - "10701:10701"
+networks:
+  coolify-infra:
+    external: true

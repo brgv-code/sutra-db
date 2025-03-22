@@ -1,0 +1,11 @@
+version: "3"
+services:
+  gel:
+    image: geldata/gel:6.2
+    environment:
+      GEL_SERVER_SECURITY: insecure_dev_mode
+    volumes:
+      - "./dbschema:/dbschema"
+    ports:
+      - "${PORT}:5656"
+      - "10701:10701"

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  gel:
+    image: geldata/gel:6.2
+    env_file:
+      - ./gel/config/production/.env
+    volumes:
+      - ./gel/dbschema:/dbschema
+      - ./gel/config/production/certs:/certs
+    ports:
+      - "5656:5656"
+      - "10701:10701"

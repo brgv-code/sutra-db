@@ -1,4 +1,4 @@
-CREATE MIGRATION m1vizyqrbqndwpafwaczzjjscb4ybs6askxrk5xgyqvhyukaz42bka
+CREATE MIGRATION m1n3as2qffbmbit2a4eifc2l7wjzve5pdlgi7jyjnxx2bc63ozhjzq
     ONTO initial
 {
   CREATE TYPE default::BlogPost {

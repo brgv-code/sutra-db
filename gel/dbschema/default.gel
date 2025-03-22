@@ -17,6 +17,7 @@ module default {
     index on (.slug);
   }
 
+
   type Tag {
     required name: str;
     multi posts: BlogPost;

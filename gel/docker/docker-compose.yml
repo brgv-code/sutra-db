@@ -8,6 +8,8 @@ services:
       GEL_SERVER_BACKEND_DSN: ${GEL_SERVER_BACKEND_DSN}
       GEL_SERVER_PASSWORD: ${GEL_SERVER_PASSWORD}
       GEL_SERVER_USER: ${GEL_SERVER_USER}
+      GEL_SERVER_INSTANCE_NAME: sutra
+      GEL_LOG_LEVEL: Info
     volumes:
       - "./dbschema:/dbschema"
       - "./credentials:/root/.config/gel/credentials"

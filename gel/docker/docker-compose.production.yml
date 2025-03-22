@@ -9,3 +9,9 @@ services:
     ports:
       - "5656:5656"
       - "10701:10701"
+    networks:
+      - coolify-infra
+
+networks:
+  coolify-infra:
+    external: true

@@ -12,8 +12,6 @@ services:
       GEL_LOG_LEVEL: Info
     volumes:
       - "./dbschema:/dbschema"
-      - "./credentials:/root/.config/gel/credentials"
-      - "./data:/var/lib/gel/data"
     ports:
       - "5656:5656"
       - "10701:10701"

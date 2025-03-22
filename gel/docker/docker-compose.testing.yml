@@ -3,9 +3,9 @@ services:
   gel:
     image: geldata/gel:6.2
     env_file:
-      - ./gel/config/gel/.env
+      - ./gel/config/testing/.env
     volumes:
-      - ./gel/dbschema:/dbschema
+      - ./gel/dbschema:/dbschema:delegated
     ports:
       - "5656:5656"
       - "10701:10701"

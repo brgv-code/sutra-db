@@ -5,8 +5,7 @@ services:
     env_file:
       - ./gel/config/production/.env
     volumes:
-      - ./gel/dbschema:/dbschema
-      - ./gel/config/production/certs:/certs
+      - ./gel/dbschema:/dbschema:delegated
     ports:
       - "5656:5656"
       - "10701:10701"

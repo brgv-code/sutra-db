@@ -135,3 +135,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# GelDB credentials
+gel/credentials/production/*
+!gel/credentials/production/.gitkeep
+gel/credentials/testing/*
+!gel/credentials/testing/.gitkeep
+
+# TLS certificates
+gel/config/*/certs/*
+!gel/config/*/certs/.gitkeep
+gel/credentials/*

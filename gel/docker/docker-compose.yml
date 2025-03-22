@@ -4,8 +4,14 @@ services:
     image: geldata/gel:6.2
     environment:
       GEL_SERVER_SECURITY: insecure_dev_mode
+      GEL_SERVER_ADMIN_UI: enabled
+      GEL_SERVER_TLS_CERT_MODE: generate_self_signed
+      GEL_SERVER_BACKEND_DSN: ${GEL_SERVER_BACKEND_DSN}
+      GEL_SERVER_PASSWORD: ${GEL_SERVER_PASSWORD}
     volumes:
       - "./dbschema:/dbschema"
+      - "./credentials:/root/.config/gel/credentials"
+      - "./data:/var/lib/gel/data"
     ports:
       - "${PORT}:5656"
       - "10701:10701"

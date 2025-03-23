@@ -13,8 +13,6 @@ services:
       GEL_SERVER_TLS_CERT_FILE: /certs/sutra-tls-cert.crt
       GEL_SERVER_TLS_KEY_FILE: /certs/sutra-tls-key.key
       GEL_DOCKER_LOG_LEVEL: debug
-    networks:
-      - coolify-infra
     volumes:
       - "./dbschema:/dbschema"
       - "./etc/gel/certs/sutra-tls-cert.cert: ./tls/sutra-tls-cert.cert"
@@ -22,6 +20,3 @@ services:
     ports:
       - "5656:5656"
       - "10701:10701"
-networks:
-  coolify-infra:
-    external: true

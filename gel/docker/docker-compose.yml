@@ -15,8 +15,8 @@ services:
       GEL_DOCKER_LOG_LEVEL: debug
     volumes:
       - "./dbschema:/dbschema"
-      - "sutra-tls-cert.cert: sutra-tls-cert.cert"
-      - "sutra-tls-key.key: sutra-tls-key.key"
+      - "/etc/gel/certs/sutra-tls-cert.cert:/tls/sutra-tls-cert.cert"
+      - "/etc/gel/certs/sutra-tls-key.key:/tls/sutra-tls-key.key"
     ports:
       - "5656:5656"
       - "10701:10701"

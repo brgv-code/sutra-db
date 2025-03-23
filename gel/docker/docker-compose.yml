@@ -17,6 +17,10 @@ services:
       - "./dbschema:/dbschema"
       - "./sutra-tls-cert.crt:/sutra-tls-cert.crt"
       - "./sutra-tls-key.key:/sutra-tls-key.key"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5656/server/status/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 2
     ports:
       - "5656:5656"
-      - "10701:10701"

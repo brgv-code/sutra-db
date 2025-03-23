@@ -20,3 +20,4 @@ services:
     ports:
       - "5656:5656"
       - "10701:10701"
+    command: ["sh", "-c", "pwd; ls -la; whoami;a"]

@@ -10,8 +10,8 @@ services:
       GEL_SERVER_USER: ${GEL_SERVER_USER}
       GEL_SERVER_INSTANCE_NAME: ${GEL_SERVER_INSTANCE_NAME}
       GEL_SERVER_TLS_CERT_MODE: require_file
-      GEL_SERVER_TLS_CERT_FILE: ./sutra-tls-cert.crt
-      GEL_SERVER_TLS_KEY_FILE: ./sutra-tls-key.key
+      GEL_SERVER_TLS_CERT_FILE: /tls/sutra-tls-cert.crt
+      GEL_SERVER_TLS_KEY_FILE: /tls/sutra-tls-key.key
       GEL_DOCKER_LOG_LEVEL: debug
     volumes:
       - "./dbschema:/dbschema"
